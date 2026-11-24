@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/smartcor_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/smartcor/smartcor_{{ version }}.tar.gz
-  sha256: e3faab1d28c6696b51076d50d759b6f5532637e93f924036a85f6b45c4197d4d
+  sha256: e342bdb93a10d952dd785162e5888e754fe0f8b6b1e37e372e9a94614be0e7e5
 
 build:
   number: 0
@@ -55,13 +55,8 @@ test:
 about:
   home: https://harshvardhaniimi.github.io/smartcor/, https://github.com/harshvardhaniimi/smartcor
   license: GPL-3.0-only
-  summary: Detects variable types (continuous, count, binary, ordinal, categorical) and selects
-    the appropriate correlation method for each pair. Supports Pearson, Spearman, Kendall's
-    tau, point-biserial, rank-biserial, phi, tetrachoric, polychoric, polyserial, Cramer's
-    V, Tschuprow's T, Theil's U, Yule's Q, and Goodman-Kruskal's gamma, each with a
-    confidence interval and p-value. Explains the selection rationale in the output,
-    follows tidy data principles, and works in both interactive and scripted workflows.
-    The methodology is described in Harshvardhan and Ranjan (2026) <doi:10.48550/arXiv.2607.22285>.
+  summary: Detects variable types (continuous, count, binary, ordinal, categorical) and selects the appropriate correlation method for each pair. Supports Pearson, Spearman, Kendall's tau, point-biserial, rank-biserial, phi, tetrachoric, polychoric, polyserial, Cramer's V, Tschuprow's T, Theil's U, Yule's Q, and 
+    Goodman-Kruskal's gamma, each with a confidence interval and p-value. Explains the selection rationale in the output, follows tidy data principles, and works in both interactive and scripted workflows. The methodology is described in Harshvardhan and Ranjan (2026) <doi:10.48550/arXiv.2607.22285>.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
